@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Project 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-    
+    <div id="vue-app">
+        <p>{{ greet('afternoon') }}</p>
+        <p>Name: {{ name }}</p>
+        <p>Job: {{ job }}</p>
+        <p>Age: {{ age }}</p>
+        <input type="text" v-bind:value="name">
+        <button v-on:click="increase(1)">Increase Age</button>
+        <button v-on:click="decrease(1)">Decrease Age</button>
+        <button v-on:dblclick="increase(5)">Increase Age 5 years</button>
+        <button v-on:dblclick="decrease(5)">Decrease Age 5 years</button>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
